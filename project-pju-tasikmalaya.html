@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="PJU Condition Analysis Dashboard project by Rina Rismawati" name="description"/>
+<title>Rina Portfolio</title>
+<link href="assets/icons/favicon.svg" rel="icon" type="image/svg+xml"/>
+<script src="theme-init.js"></script>
+<link href="style.css" rel="stylesheet"/>
+<script defer="" src="script.js"></script>
+</head>
+<body>
+<div class="site-shell">
+<header class="site-header">
+<nav aria-label="Main navigation" class="navbar">
+<a aria-label="Home" class="brand-dots" href="index.html">
+<span class="dot red"></span>
+<span class="dot yellow"></span>
+<span class="dot green"></span>
+</a>
+<div class="nav-links">
+<a data-i18n="nav.home" href="index.html">Home</a>
+<a data-i18n="nav.about" href="about.html">About</a>
+<a data-i18n="nav.skills" href="skills.html">Skills</a>
+<a class="active" data-i18n="nav.projects" href="project.html">Projects</a>
+<a data-i18n="nav.certificates" href="sertification.html">Certificates</a>
+<a data-i18n="nav.contact" href="contact.html">Contact</a>
+</div>
+<div class="nav-tools">
+<div aria-label="Language switcher" class="language-switch">
+<span aria-pressed="true" class="active" data-lang="en" role="button" tabindex="0">EN</span>
+<span class="divider">|</span>
+<span aria-pressed="false" class="inactive" data-lang="id" role="button" tabindex="0">IN</span>
+</div>
+<input aria-label="Toggle dark mode" class="theme-input" id="theme-toggle" type="checkbox"/>
+<label class="theme-toggle" for="theme-toggle" title="Toggle light/dark mode">
+<span class="theme-knob">☾</span>
+</label>
+</div>
+</nav>
+</header>
+<main>
+<section class="project-detail-hero">
+<a class="project-back" data-i18n="pju.back" href="project.html">← Back to Projects</a>
+<div class="project-detail-heading">
+<div>
+<div class="project-category"><span>Data Analysis</span><span>Dashboard</span><span>Geospatial</span></div>
+<h1 data-i18n="pju.title">PJU Condition Analysis Dashboard — Tasikmalaya Regency</h1>
+<p data-i18n="pju.subtitle">Data Analysis, Geospatial Mapping &amp; Interactive Dashboard</p>
+</div>
+<div class="project-detail-actions">
+<a class="btn outline" data-i18n="pju.github" href="https://github.com/Rinarsm/Project_KP_FIX" rel="noopener noreferrer" target="_blank">View GitHub</a>
+<a class="btn primary" data-i18n="pju.demo" href="https://pjukabtasik.streamlit.app/" rel="noopener noreferrer" target="_blank">↗ Live Dashboard</a>
+</div>
+</div>
+</section>
+<section class="project-detail-grid">
+<article class="card project-detail-card">
+<h2 data-i18n="pju.overviewTitle">Project Overview</h2>
+<p data-i18n="pju.overviewText">This project analyzes the condition and spatial distribution of Public Street Lighting (PJU) across Tasikmalaya Regency. The workflow combines data cleaning, exploratory analysis, condition classification, spatial joining with district boundaries, static and interactive mapping, and a Streamlit dashboard for easier exploration.</p>
+</article>
+<article class="card project-detail-card">
+<h2 data-i18n="pju.toolsTitle">Tools Used</h2>
+<div class="detail-tags"><span class="tag">Python</span><span class="tag">Pandas</span><span class="tag">NumPy</span><span class="tag">GeoPandas</span><span class="tag">Shapely</span><span class="tag">Matplotlib</span><span class="tag">Seaborn</span><span class="tag">Folium</span><span class="tag">Branca</span><span class="tag">scikit-learn</span><span class="tag">Random Forest</span><span class="tag">LabelEncoder</span><span class="tag">Streamlit</span></div>
+</article>
+</section>
+<section class="project-detail-grid">
+<article class="card project-detail-card">
+<h2 data-i18n="pju.datasetTitle">Dataset &amp; Processing</h2>
+<p data-i18n="pju.datasetText">The raw dataset contains 5,589 PJU records with location, coordinates, condition, PJU type, pole type, and lamp type. After handling missing values, 4,235 records remained for condition analysis. A spatial join with the Tasikmalaya Regency district GeoJSON retained 3,229 records whose coordinates fall inside the mapped district boundaries.</p>
+</article>
+<article class="card project-detail-card">
+<h2 data-i18n="pju.workflowTitle">Analysis Workflow</h2>
+<p class="workflow-line" data-i18n="pju.workflowText">Data Loading → Data Cleaning → District Extraction → Exploratory Feature Importance → Condition Classification → Coordinate Parsing → GeoDataFrame Creation → Spatial Join → District Summary → Static &amp; Interactive Maps → Streamlit Dashboard</p>
+</article>
+</section>
+<section class="card project-insights">
+<h2 data-i18n="pju.insightsTitle">Key Insights</h2>
+<div class="insight-grid">
+<div class="insight-item"><span>01</span><p data-i18n="pju.insight1">After non-spatial cleaning, the dataset contains 3,777 PJU in good condition and 458 damaged PJU.</p></div>
+<div class="insight-item"><span>02</span><p data-i18n="pju.insight2">Sukahening recorded the highest damaged count in the district summary shown in the notebook, with 31 damaged PJU and a damaged percentage of about 68.9%.</p></div>
+<div class="insight-item"><span>03</span><p data-i18n="pju.insight3">Among the technical attributes examined, lamp type showed a stronger relationship with PJU condition than pole type in the exploratory feature-importance analysis.</p></div>
+<div class="insight-item"><span>04</span><p data-i18n="pju.insight4">The notebook concludes that maintenance attention should prioritize vulnerable pole and lamp categories, while the findings should be treated as an initial indication because the available variables are limited and the category distribution is uneven.</p></div>
+</div>
+</section>
+<section class="project-visual-section">
+<div class="section-title-row">
+<h2 data-i18n="pju.visualsTitle">Analysis &amp; Geospatial Results</h2>
+</div>
+<div class="visual-grid">
+<figure class="card visual-card">
+<img alt="Distribution of good and damaged PJU" src="assets/images/pju-condition-distribution.png"/>
+<figcaption data-i18n="pju.conditionCaption">Distribution of PJU condition: good versus damaged</figcaption>
+</figure>
+<figure class="card visual-card">
+<img alt="Top ten districts with the most damaged PJU" src="assets/images/pju-top10-damaged.png"/>
+<figcaption data-i18n="pju.top10Caption">Top 10 districts with the highest number of damaged PJU</figcaption>
+</figure>
+<figure class="card visual-card">
+<img alt="Top ten districts by damaged PJU percentage" src="assets/images/pju-top10-damaged-percentage.png"/>
+<figcaption data-i18n="pju.percentCaption">Top 10 districts by damaged PJU percentage</figcaption>
+</figure>
+<figure class="card visual-card">
+<img alt="Tasikmalaya Regency map colored by damaged PJU category" src="assets/images/pju-tasik-map.png"/>
+<figcaption data-i18n="pju.mapCaption">Tasikmalaya Regency district map categorized by damaged-PJU percentage</figcaption>
+</figure>
+<figure class="card visual-card">
+<img alt="Damaged PJU by lamp type" src="assets/images/pju-damaged-by-lamp.png"/>
+<figcaption data-i18n="pju.lampCaption">Damaged PJU counts by lamp type</figcaption>
+</figure>
+<figure class="card visual-card">
+<img alt="Damaged PJU by pole type" src="assets/images/pju-damaged-by-pole.png"/>
+<figcaption data-i18n="pju.poleCaption">Damaged PJU counts by pole type</figcaption>
+</figure>
+</div>
+</section>
+<section class="card project-detail-card">
+<h2 data-i18n="pju.limitationsTitle">Important Note</h2>
+<p data-i18n="pju.limitationsText">The analysis is a snapshot based on the available attributes. It does not include factors such as installation age, installation quality, weather, accident exposure, or usage intensity. Because some categories have much smaller populations than others, percentage-based damage comparisons should be interpreted carefully.</p>
+</section>
+</main>
+<footer class="site-footer">
+<div class="footer-inner">
+<span data-i18n="footer.copy">© 2026 Rina Rismawati. All rights reserved.</span>
+<span class="footer-views" title="Total portfolio views" aria-label="Total portfolio views"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5c5.4 0 9.6 4.7 10.6 6a1.6 1.6 0 0 1 0 2c-1 1.3-5.2 6-10.6 6S2.4 14.3 1.4 13a1.6 1.6 0 0 1 0-2C2.4 9.7 6.6 5 12 5Zm0 2c-4.1 0-7.6 3.4-8.6 5 1 1.6 4.5 5 8.6 5s7.6-3.4 8.6-5c-1-1.6-4.5-5-8.6-5Zm0 2.2A2.8 2.8 0 1 1 12 14.8 2.8 2.8 0 0 1 12 9.2Z"/></svg><span data-i18n="footer.views">Views</span><strong data-site-view-count>—</strong></span>
+<span class="footer-divider"></span>
+<div aria-label="Social links" class="footer-socials">
+<a href="https://www.linkedin.com/in/rinarsm17/" rel="noopener noreferrer" target="_blank" title="LinkedIn">in</a>
+<a href="https://github.com/Rinarsm" rel="noopener noreferrer" target="_blank" title="GitHub"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .7a11.3 11.3 0 0 0-3.6 22c.6.1.8-.3.8-.6v-2.2c-3.4.7-4.1-1.4-4.1-1.4-.5-1.4-1.3-1.8-1.3-1.8-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.4-5.5-6a4.7 4.7 0 0 1 1.2-3.2 4.4 4.4 0 0 1 .1-3.2s1-.3 3.3 1.2a11.3 11.3 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2a4.4 4.4 0 0 1 .1 3.2 4.7 4.7 0 0 1 1.2 3.2c0 4.6-2.8 5.7-5.5 6 .4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A11.3 11.3 0 0 0 12 .7Z"/></svg></a>
+<a href="mailto:rinarsm17@gmail.com" title="Email">✉</a>
+</div>
+</div>
+</footer>
+</div>
+</body>
+</html>
